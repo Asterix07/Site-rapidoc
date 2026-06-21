@@ -25,45 +25,34 @@
     
     <!-- FONTS & ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="rapidoc_256.png">
 </head>
 <body class="bg-darkBg text-gray-100 font-sans antialiased scroll-smooth">
 
-    <!-- =========================================================================
-         [SEÇÃO 1] - NAVEGAÇÃO / HEADER
-         ========================================================================= -->
+    <!-- [SEÇÃO 1] - NAVEGAÇÃO / HEADER -->
     <nav class="border-b border-gray-800 bg-darkBg/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <!-- Brand / Logo -->
             <div class="flex items-center gap-3">
                 <img src="rapidoc_256.png" alt="Rapidoc Pro Logo" class="w-8 h-8 rounded-lg object-cover">
                 <span class="text-xl font-bold tracking-tight text-white">Rapidoc <span class="text-accentGold">Pro</span></span>
             </div>
-            
-            <!-- Menu de Links -->
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
                 <a href="#funcionalidades" class="hover:text-white transition-colors">Funcionalidades</a>
                 <a href="#dashboard" class="hover:text-white transition-colors">O Sistema</a>
-                <a href="#depoimentos" class="hover:text-white transition-colors">Depoimentos</a>
                 <a href="#precos" class="hover:text-white transition-colors">Planos</a>
+                <a href="#automacao" class="hover:text-white transition-colors">Como Funciona a Entrega</a>
             </div>
-            
-            <!-- Call To Action Menor -->
             <div>
                 <a href="#precos" class="bg-accentGold hover:bg-yellow-600 text-darkBg font-bold px-4 py-2 rounded-lg text-sm transition-all shadow-lg shadow-yellow-600/10 hover:scale-105 inline-block">
-                    Teste Grátis
+                    Contratar Agora
                 </a>
             </div>
         </div>
     </nav>
 
-
-    <!-- =========================================================================
-         [SEÇÃO 2] - HERO / APRESENTAÇÃO PRINCIPAL
-         ========================================================================= -->
+    <!-- [SEÇÃO 2] - HERO / APRESENTAÇÃO PRINCIPAL -->
     <header class="relative overflow-hidden py-16 lg:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
-            
-            <!-- Textos e CTAs -->
             <div class="space-y-6 lg:col-span-5">
                 <div class="inline-flex items-center gap-2 bg-yellow-500/10 text-accentGold border border-yellow-500/20 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
                     🚀 Versão Pro v2.0 Liberada
@@ -78,20 +67,14 @@
                     <a href="#precos" class="bg-accentGold hover:bg-yellow-600 text-darkBg font-bold text-center px-8 py-4 rounded-xl text-lg transition-all shadow-xl shadow-yellow-600/20 hover:scale-[1.02]">
                         Começar Agora
                     </a>
-                    <a href="#dashboard" class="border border-gray-700 hover:border-gray-500 text-white font-medium text-center px-8 py-4 rounded-xl text-lg transition-all bg-darkCard/50">
-                        Ver Demonstração
-                    </a>
                 </div>
                 <p class="text-xs text-gray-500 flex items-center gap-2 justify-center sm:justify-start">
-                    <i class="fa-solid fa-shield-halved text-accentGold"></i> Teste grátis por 7 dias • Sem cartão de crédito necessário
+                    <i class="fa-solid fa-bolt text-accentGold"></i> Liberação imediata e instalação automatizada após o pagamento.
                 </p>
             </div>
-            
-            <!-- Mockup do App com Imagem Real -->
             <div class="relative lg:col-span-7">
                 <div class="absolute inset-0 bg-gradient-to-tr from-accentGold/10 to-transparent blur-3xl rounded-full"></div>
                 <div class="border border-gray-800 rounded-2xl overflow-hidden shadow-2xl bg-darkCard transition-all hover:border-gray-700">
-                    <!-- Topo do Mockup do Navegador -->
                     <div class="bg-gray-900 px-4 py-3 border-b border-gray-800 flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <div class="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -99,197 +82,155 @@
                             <div class="w-3 h-3 bg-green-500 rounded-full"></div>
                             <span class="text-xs text-gray-500 ml-2">app.rapidocpro.com/financeiro</span>
                         </div>
-                        <span class="text-[10px] bg-darkBg text-accentGold px-2 py-0.5 rounded border border-gray-800 font-mono">June/2026</span>
                     </div>
-                    <!-- Imagem Real Carregada -->
                     <div class="p-1 bg-[#131520]">
                         <img src="Captura de tela 2026-06-20 224640.png" alt="Painel Financeiro Rapidoc Pro" class="w-full h-auto rounded-lg shadow-inner">
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
 
-    <hr class="border-gray-900">
-
-
-    <!-- =========================================================================
-         [SEÇÃO 3] - GRID DE FUNCIONALIDADES
-         ========================================================================= -->
-    <section id="funcionalidades" class="py-20 bg-darkCard/20">
+    <!-- [NOVA SEÇÃO] - EXPLICAÇÃO DA AUTOMAÇÃO DE ENTREGA -->
+    <section id="automacao" class="py-16 bg-darkCard/40 border-t border-b border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Tudo o que sua pequena empresa precisa</h2>
-                <p class="text-gray-400">Desenhado especificamente para ser rápido, direto ao ponto e visualmente impecável.</p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Card 1: Orçamentos -->
-                <div class="bg-darkCard p-6 rounded-2xl border border-gray-800/80 hover:border-accentGold/40 transition-all duration-300 group hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-yellow-500/10 text-accentGold rounded-xl flex items-center justify-center mb-5 text-xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-file-invoice-dollar"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Orçamentos</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Emita propostas comerciais profissionais em segundos. Envie direto para seus clientes e feche contratos com mais autoridade.</p>
-                </div>
-                <!-- Card 2: Clientes -->
-                <div class="bg-darkCard p-6 rounded-2xl border border-gray-800/80 hover:border-accentGold/40 transition-all duration-300 group hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-blue-500/10 text-accentBlue rounded-xl flex items-center justify-center mb-5 text-xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Clientes</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Organize sua carteira. Tenha o histórico de pedidos, contatos e o status de pendências de cada cliente centralizado.</p>
-                </div>
-                <!-- Card 3: Produtos -->
-                <div class="bg-darkCard p-6 rounded-2xl border border-gray-800/80 hover:border-accentGold/40 transition-all duration-300 group hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-green-500/10 text-green-400 rounded-xl flex items-center justify-center mb-5 text-xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-boxes-stacked"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Produtos</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Gerencie seu catálogo de produtos ou serviços com preços atualizados, facilitando a puxada automática na hora do orçamento.</p>
-                </div>
-                <!-- Card 4: Financeiro -->
-                <div class="bg-darkCard p-6 rounded-2xl border border-gray-800/80 hover:border-accentGold/40 transition-all duration-300 group hover:-translate-y-1">
-                    <div class="w-12 h-12 bg-purple-500/10 text-purple-400 rounded-xl flex items-center justify-center mb-5 text-xl group-hover:scale-110 transition-transform">
-                        <i class="fa-solid fa-chart-pie"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-2">Financeiro</h3>
-                    <p class="text-sm text-gray-400 leading-relaxed">Visualize em tempo real taxas de conversão de orçamentos pagos, faturamentos mensais, valores pendentes e parciais.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- =========================================================================
-         [SEÇÃO 4] - DETALHAMENTO DO APPLICATIVO
-         ========================================================================= -->
-    <section id="dashboard" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-gradient-to-r from-darkCard to-darkBg border border-gray-800 rounded-3xl p-8 lg:p-12 grid md:grid-cols-12 gap-8 items-center">
-            <div class="md:col-span-5 space-y-6">
-                <h2 class="text-3xl font-bold text-white tracking-tight">Decisões baseadas em dados, não em palpites</h2>
-                <p class="text-gray-400 text-sm leading-relaxed">
-                    O painel de controle do Rapidoc Pro organiza automaticamente o fluxo financeiro da sua empresa para que você saiba exatamente para onde o dinheiro está indo.
-                </p>
-                <div class="space-y-3 text-sm text-gray-300">
-                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-green-400 text-xs"></i> <span>Acompanhamento mensal analítico</span></div>
-                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-green-400 text-xs"></i> <span>Indicadores de valores Recebidos, Pendentes e Cancelados</span></div>
-                    <div class="flex items-center gap-3"><i class="fa-solid fa-check text-green-400 text-xs"></i> <span>Filtro rápido de Documentos do Mês com alteração de status</span></div>
-                </div>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-white">Contratou, instalou. Simples assim.</h2>
+                <p class="text-gray-400 mt-2">Você não precisa esperar ninguém para começar a usar o Rapidoc Pro.</p>
             </div>
             
-            <!-- Cards de Destaque Simulado -->
-            <div class="md:col-span-7 grid grid-cols-2 gap-4">
-                <div class="bg-darkBg border border-gray-800 p-5 rounded-2xl">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Total Faturado</span>
-                    <span class="text-2xl font-black text-accentGold">R$ 0,00</span>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="space-y-3 p-4">
+                    <div class="w-12 h-12 bg-accentGold/10 text-accentGold rounded-full flex items-center justify-center text-xl font-bold mx-auto">1</div>
+                    <h3 class="text-lg font-bold text-white">Pagamento Seguro</h3>
+                    <p class="text-sm text-gray-400">Aprovação instantânea via Pix ou Cartão através do nosso checkout seguro.</p>
                 </div>
-                <div class="bg-darkBg border border-gray-800 p-5 rounded-2xl">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Recebido</span>
-                    <span class="text-2xl font-black text-green-400">R$ 0,00</span>
+                <div class="space-y-3 p-4">
+                    <div class="w-12 h-12 bg-accentBlue/10 text-accentBlue rounded-full flex items-center justify-center text-xl font-bold mx-auto">2</div>
+                    <h3 class="text-lg font-bold text-white">Escolha o Método</h3>
+                    <p class="text-sm text-gray-400">Instale você mesmo em 2 minutos seguindo o tutorial em vídeo ou solicite nossa instalação automática guiada.</p>
                 </div>
-                <div class="bg-darkBg border border-gray-800 p-5 rounded-2xl">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Pendente</span>
-                    <span class="text-2xl font-black text-yellow-500">R$ 0,00</span>
-                </div>
-                <div class="bg-darkBg border border-gray-800 p-5 rounded-2xl">
-                    <span class="text-xs font-bold text-gray-500 uppercase tracking-wider block mb-1">Taxa de Conversão</span>
-                    <span class="text-2xl font-black text-accentBlue">100% Visual</span>
+                <div class="space-y-3 p-4">
+                    <div class="w-12 h-12 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center text-xl font-bold mx-auto">3</div>
+                    <h3 class="text-lg font-bold text-white">Agendamento Remoto opcional</h3>
+                    <p class="text-sm text-gray-400">Se preferir, nossa equipe entra via AnyDesk de forma agendada pelo próprio site para fazer tudo por você.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- =========================================================================
-         [SEÇÃO 5] - PROVA SOCIAL / DEPOIMENTOS
-         ========================================================================= -->
-    <section id="depoimentos" class="py-20 bg-darkCard/10 border-t border-gray-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-white mb-4">Quem usa, aprova</h2>
-                <p class="text-gray-400">Pequenas empresas que profissionalizaram a gestão com o Rapidoc Pro.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-darkCard border border-gray-800/60 p-6 rounded-2xl">
-                    <div class="flex text-accentGold gap-1 mb-4 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-sm text-gray-300 italic mb-4">"Paramos de perder prazos de orçamentos. O painel financeiro escuro é lindo e muito simples de atualizar."</p>
-                    <span class="text-xs font-bold text-white block">— Marcos R., Prestador de Serviços</span>
-                </div>
-                <div class="bg-darkCard border border-gray-800/60 p-6 rounded-2xl">
-                    <div class="flex text-accentGold gap-1 mb-4 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-sm text-gray-300 italic mb-4">"O controle de clientes mudou o jogo por aqui. Consigo ver na hora quem está pendente e cobrar sem constrangimento."</p>
-                    <span class="text-xs font-bold text-white block">— Juliana A., CEO de Microagência</span>
-                </div>
-                <div class="bg-darkCard border border-gray-800/60 p-6 rounded-2xl">
-                    <div class="flex text-accentGold gap-1 mb-4 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="text-sm text-gray-300 italic mb-4">"Perfeito para quem odeia sistemas complexos cheios de botões inúteis. O Rapidoc vai direto ao ponto."</p>
-                    <span class="text-xs font-bold text-white block">— Ricardo T., Distribuidor</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- =========================================================================
-         [SEÇÃO 6] - TABELA DE PREÇOS / OFERTA
-         ========================================================================= -->
-    <section id="precos" class="py-20 bg-darkCard/30 border-t border-gray-900">
+    <!-- [SEÇÃO PREÇOS] -->
+    <section id="precos" class="py-20 bg-darkCard/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl font-bold text-white">Preço simples e transparente</h2>
-                <p class="text-gray-400">Acesso completo a todas as ferramentas sem pegadinhas ou taxas adicionais.</p>
+                <h2 class="text-3xl font-bold text-white">Pronto para começar?</h2>
             </div>
 
-            <div class="max-w-md mx-auto bg-darkCard border-2 border-accentGold rounded-3xl p-8 relative shadow-2xl shadow-yellow-600/5 transition-transform hover:scale-[1.01]">
+            <div class="max-w-md mx-auto bg-darkCard border-2 border-accentGold rounded-3xl p-8 relative shadow-2xl">
                 <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accentGold text-darkBg text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider">
-                    Plano Recomendado
+                    Acesso Imediato
                 </div>
                 <div class="text-center mb-6">
-                    <h3 class="text-xl font-bold text-white mb-2">Plano Pro Completo</h3>
+                    <h3 class="text-xl font-bold text-white mb-2">Licença Rapidoc Pro</h3>
                     <div class="text-5xl font-black text-white my-5">R$ 49<span class="text-lg font-medium text-gray-500">/mês</span></div>
-                    <p class="text-xs text-gray-400">Cancele quando quiser, sem contratos de fidelidade.</p>
                 </div>
                 <hr class="border-gray-800 my-6">
                 <ul class="space-y-4 text-sm text-gray-300 mb-8">
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Orçamentos Ilimitados</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Clientes e Produtos Ilimitados</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Painel Financeiro e Métricas</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Suporte Prioritário via WhatsApp</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Interface Dark Mode Inteligente</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Todos os módulos liberados</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Download imediato do instalador</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Tutorial de Auto-Instalação passo a passo</li>
+                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Suporte Remoto Incluso (Opcional se precisar)</li>
                 </ul>
-                <a href="#" class="block text-center bg-accentGold hover:bg-yellow-600 text-darkBg font-black py-4 rounded-xl transition-all shadow-lg shadow-yellow-600/10 hover:shadow-yellow-600/20">
-                    Começar Teste Grátis de 7 Dias
-                </a>
+                <!-- MUDANÇA DA FUNÇÃO DO BOTÃO: AGORA SIMULA A AUTOMAÇÃO DO FLUXO COMPLETO -->
+                <button onclick="simularCompra()" class="w-full text-center bg-accentGold hover:bg-yellow-600 text-darkBg font-black py-4 rounded-xl transition-all shadow-lg">
+                    Comprar Licença e Instalar
+                </button>
             </div>
         </div>
     </section>
 
+    <!-- [NOVO TELA MODAL] - PORTAL DE ENTREGA AUTOMÁTICA PÓS-PAGAMENTO -->
+    <div id="portalEntrega" class="fixed inset-0 bg-darkBg/95 hidden z-50 items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-darkCard border border-gray-800 w-full max-w-2xl rounded-3xl p-6 sm:p-10 relative space-y-6">
+            <div class="text-center space-y-2">
+                <div class="w-16 h-16 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-2 animate-bounce">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-black text-white">Pagamento Aprovado!</h2>
+                <p class="text-gray-400 text-sm">Sua licença do Rapidoc Pro v2.0 já está gerada. Como deseja instalar?</p>
+            </div>
 
-    <!-- =========================================================================
-         [SEÇÃO 7] - PERGUNTAS FREQUENTES (FAQ)
-         ========================================================================= -->
-    <section class="py-20 border-t border-gray-900 max-w-4xl mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl font-bold text-white text-center mb-10">Perguntas Frequentes</h2>
-        <div class="space-y-4">
-            <div class="bg-darkCard border border-gray-800 p-5 rounded-xl">
-                <h4 class="text-base font-bold text-white mb-2">Preciso cadastrar cartão de crédito para testar?</h4>
-                <p class="text-sm text-gray-400">Não! Você cria sua conta, usa a plataforma com todos os recursos liberados por 7 dias e só paga se decidir continuar.</p>
+            <div class="grid md:grid-cols-2 gap-4 pt-4">
+                <!-- OPÇÃO AUTÔNOMA: TUTORIAL -->
+                <div class="border border-gray-800 bg-darkBg/50 p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-gray-700 transition">
+                    <div>
+                        <div class="text-accentGold text-xl mb-2"><i class="fa-solid fa-bolt"></i></div>
+                        <h3 class="font-bold text-white text-base">Quero instalar agora sozinho</h3>
+                        <p class="text-xs text-gray-400 mt-1">Baixe o instalador imediatamente e assista ao vídeo explicativo de 2 minutos.</p>
+                    </div>
+                    <div class="space-y-2 pt-2">
+                        <a href="#" class="block text-center bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold py-2.5 rounded-lg transition">
+                            <i class="fa-solid fa-download mr-1"></i> Baixar Instalador (.exe)
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="block text-center text-accentGold border border-accentGold/20 hover:bg-accentGold/5 text-xs font-bold py-2 rounded-lg transition">
+                            <i class="fa-solid fa-play mr-1"></i> Ver Vídeo Tutorial
+                        </a>
+                    </div>
+                </div>
+
+                <!-- OPÇÃO SUPORTE: AGENDAMENTO REMOTO -->
+                <div class="border border-gray-800 bg-darkBg/50 p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-gray-700 transition">
+                    <div>
+                        <div class="text-accentBlue text-xl mb-2"><i class="fa-solid fa-headset"></i></div>
+                        <h3 class="font-bold text-white text-base">Preciso de ajuda (Suporte Técnico)</h3>
+                        <p class="text-xs text-gray-400 mt-1">Agende um horário automático para que um técnico faça a instalação remota no seu computador.</p>
+                    </div>
+                    <div class="space-y-2 pt-2">
+                        <!-- Botão que abre a ferramenta de agenda embutida -->
+                        <button onclick="abrirCalendario()" class="w-full text-center bg-accentBlue hover:bg-blue-600 text-white text-xs font-bold py-2.5 rounded-lg transition">
+                            <i class="fa-solid fa-calendar-days mr-1"></i> Escolher Dia e Horário
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="bg-darkCard border border-gray-800 p-5 rounded-xl">
-                <h4 class="text-base font-bold text-white mb-2">Posso acessar o Rapidoc Pro pelo celular?</h4>
-                <p class="text-sm text-gray-400">Sim! O Rapidoc Pro foi desenvolvido de forma responsiva para que você acompanhe o financeiro e feche orçamentos de onde estiver.</p>
+
+            <!-- CONTAINER PARA EMBUTIR O SCRIPT DE AGENDAMENTO (CALENDLY) -->
+            <div id="areaCalendario" class="hidden border-t border-gray-800 pt-6">
+                <h4 class="text-sm font-bold text-white mb-3 text-center">Selecione o melhor horário para o suporte via AnyDesk:</h4>
+                <!-- Mockup de calendário responsivo -->
+                <div class="bg-darkBg border border-gray-800 p-4 rounded-xl text-center text-xs text-gray-500">
+                    <p class="text-gray-400 mb-2">[Aqui abrirá o Calendly / Widget de Agendamento Automático]</p>
+                    <div class="grid grid-cols-3 gap-2 max-w-xs mx-auto mt-2">
+                        <button onclick="alert('Horário agendado com sucesso! Você receberá o link do AnyDesk no e-mail.')" class="bg-darkCard p-2 rounded border border-gray-700 hover:border-accentBlue text-white font-medium">Hoje 14:00</button>
+                        <button onclick="alert('Horário agendado com sucesso! Você receberá o link do AnyDesk no e-mail.')" class="bg-darkCard p-2 rounded border border-gray-700 hover:border-accentBlue text-white font-medium">Hoje 16:00</button>
+                        <button onclick="alert('Horário agendado com sucesso! Você receberá o link do AnyDesk no e-mail.')" class="bg-darkCard p-2 rounded border border-gray-700 hover:border-accentBlue text-white font-medium">Amanhã 09:00</button>
+                    </div>
+                </div>
             </div>
+
+            <button onclick="fecharPortal()" class="absolute top-4 right-4 text-gray-500 hover:text-white text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
         </div>
-    </section>
+    </div>
 
+    <!-- JAVASCRIPT DE INTERAÇÃO -->
+    <script>
+        function simularCompra() {
+            // Em produção, o cliente clica no botão, vai para o Mercado Pago/Stripe, e volta para cá
+            document.getElementById('portalEntrega').style.display = 'flex';
+        }
+        function fecharPortal() {
+            document.getElementById('portalEntrega').style.display = 'none';
+            document.getElementById('areaCalendario').classList.add('hidden');
+        }
+        function abrirCalendario() {
+            document.getElementById('areaCalendario').classList.remove('hidden');
+        }
+    </script>
 
-    <!-- =========================================================================
-         [SEÇÃO 8] - RODAPÉ
-         ========================================================================= -->
     <footer class="border-t border-gray-900 py-8 text-center text-xs text-gray-500 bg-darkBg">
-        <p>&copy; 2026 Rapidoc Pro v2.0. Todos os direitos reservados. Desenvolvido para impulsionar pequenos negócios.</p>
+        <p>&copy; 2026 Rapidoc Pro v2.0. Todos os direitos reservados.</p>
     </footer>
 
 </body>
