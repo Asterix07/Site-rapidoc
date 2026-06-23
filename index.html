@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapidoc Pro | Gestão Inteligente para Pequenas Empresas</title>
-     <link rel="icon" type="image/png" href="rapidoc_256.png">
+    <link rel="icon" type="image/png" href="rapidoc_256.png">
     
     <!-- TAILWIND CONFIG & COLORS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -29,7 +30,7 @@
 </head>
 <body class="bg-darkBg text-gray-100 font-sans antialiased scroll-smooth">
 
-    <!-- [SEÇÃO 1] - NAVEGAÇÃO / HEADER -->
+    <!-- NAVEGAÇÃO / HEADER -->
     <nav class="border-b border-gray-800 bg-darkBg/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -38,51 +39,39 @@
             </div>
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
                 <a href="#funcionalidades" class="hover:text-white transition-colors">Funcionalidades</a>
-                <a href="#dashboard" class="hover:text-white transition-colors">O Sistema</a>
                 <a href="#precos" class="hover:text-white transition-colors">Planos</a>
-                <a href="#automacao" class="hover:text-white transition-colors">Como Funciona a Entrega</a>
+                <a href="#automacao" class="hover:text-white transition-colors">Como Funciona</a>
             </div>
             <div class="flex items-center gap-4">
-                <!-- Status do usuário na barra superior -->
-                <span id="userStatus" class="text-xs text-gray-400 hidden"><i class="fa-solid fa-circle text-green-500 mr-1 animate-pulse"></i> Conectado</span>
-                <button id="navLoginBtn" onclick="abrirLogin()" class="bg-gray-800 hover:bg-gray-700 text-white font-medium px-4 py-2 rounded-lg text-sm transition-all">
-                    Entrar
-                </button>
-                <button id="navActionBtn" onclick="acaoContratar()" class="bg-accentGold hover:bg-yellow-600 text-darkBg font-bold px-4 py-2 rounded-lg text-sm transition-all shadow-lg shadow-yellow-600/10 hover:scale-105">
-                    Contratar Agora
+                <span id="userStatus" class="text-xs text-gray-400 hidden"><i class="fa-solid fa-circle text-green-500 mr-1 animate-pulse"></i> Conta Ativa</span>
+                <button id="navLoginBtn" onclick="abrirAuthModal()" class="bg-gray-800 hover:bg-gray-700 text-white font-medium px-4 py-2 rounded-lg text-sm transition-all">
+                    Criar Conta / Entrar
                 </button>
             </div>
         </div>
     </nav>
 
-    <!-- [SEÇÃO 2] - HERO / APRESENTAÇÃO PRINCIPAL -->
+    <!-- HERO PRINCIPAL -->
     <header class="relative overflow-hidden py-16 lg:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
             <div class="space-y-6 lg:col-span-5">
                 <div class="inline-flex items-center gap-2 bg-yellow-500/10 text-accentGold border border-yellow-500/20 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
-                    🚀 Versão Pro v2.0 Liberada
+                    🚀 Licenciamento Unificado Online
                 </div>
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-none">
-                    O controle total do seu negócio, sem complicação.
+                    O controle total do seu negócio, sem complication.
                 </h1>
                 <p class="text-lg text-gray-400">
-                    Deixe planilhas confusas para trás. O <strong>Rapidoc Pro</strong> centraliza seus orçamentos, clientes, produtos e o financeiro em um único painel visual e intuitivo.
+                    Gerencie orçamentos, estoque e financeiro em um sistema robusto. Crie sua conta, obtenha sua chave de licença única e ative o programa imediatamente.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 pt-2">
-                    <button onclick="acaoContratar()" class="bg-accentGold hover:bg-yellow-600 text-darkBg font-bold text-center px-8 py-4 rounded-xl text-lg transition-all shadow-xl shadow-yellow-600/20 hover:scale-[1.02]">
-                        Contratar Licença
-                    </button>
-                    <button onclick="acaoTeste()" class="border border-gray-700 hover:border-gray-500 text-white font-bold text-center px-8 py-4 rounded-xl text-lg transition-all">
-                        Experimentar 7 dias grátis
-                    </button>
+                <div class="pt-2">
+                    <a href="#precos" class="inline-block bg-accentGold hover:bg-yellow-600 text-darkBg font-black text-center px-8 py-4 rounded-xl text-lg transition-all shadow-xl shadow-yellow-600/20 hover:scale-[1.02]">
+                        Escolher Plano e Ativar Chave
+                    </a>
                 </div>
-                <p class="text-xs text-gray-500 flex items-center gap-2 justify-center sm:justify-start">
-                    <i class="fa-solid fa-bolt text-accentGold"></i> Liberação imediata e instalação automatizada após o login/pagamento.
-                </p>
             </div>
             <div class="relative lg:col-span-7">
-                <div class="absolute inset-0 bg-gradient-to-tr from-accentGold/10 to-transparent blur-3xl rounded-full"></div>
-                <div class="border border-gray-800 rounded-2xl overflow-hidden shadow-2xl bg-darkCard transition-all hover:border-gray-700">
+                <div class="border border-gray-800 rounded-2xl overflow-hidden shadow-2xl bg-darkCard">
                     <div class="bg-gray-900 px-4 py-3 border-b border-gray-800 flex items-center justify-between">
                         <div class="flex items-center gap-2">
                             <div class="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -92,162 +81,180 @@
                         </div>
                     </div>
                     <div class="p-1 bg-[#131520]">
-                        <img src="Captura de tela 2026-06-20 224640.png" alt="Painel Financeiro Rapidoc Pro" class="w-full h-auto rounded-lg shadow-inner">
+                        <img src="Captura de tela 2026-06-20 224640.png" alt="Painel Financeiro" class="w-full h-auto rounded-lg shadow-inner">
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- [SEÇÃO] - EXPLICAÇÃO DA AUTOMAÇÃO DE ENTREGA -->
-    <section id="automacao" class="py-16 bg-darkCard/40 border-t border-b border-gray-900">
+    <!-- SEÇÃO DE PLANOS (EXIBIDA APÓS CADASTRO OU DIRETAMENTE NA PÁGINA) -->
+    <section id="precos" class="py-20 bg-darkCard/20 border-t border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <h2 class="text-3xl font-bold text-white">Contratou, instalou. Simples assim.</h2>
-                <p class="text-gray-400 mt-2">Você não precisa esperar ninguém para começar a usar o Rapidoc Pro.</p>
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-2">
+                <h2 class="text-3xl font-bold text-white">Planos flexíveis para a sua empresa</h2>
+                <p class="text-gray-400">Sua chave de acesso controlará tanto o painel web quanto o programa instalado.</p>
             </div>
-            
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="space-y-3 p-4">
-                    <div class="w-12 h-12 bg-accentGold/10 text-accentGold rounded-full flex items-center justify-center text-xl font-bold mx-auto">1</div>
-                    <h3 class="text-lg font-bold text-white">Faça seu Cadastro</h3>
-                    <p class="text-sm text-gray-400">Crie seu login em poucos segundos para garantir sua chave de licença única.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
+                
+                <!-- PLANO 1: GRATUITO -->
+                <div class="bg-darkCard border border-gray-800 rounded-3xl p-6 flex flex-col justify-between relative">
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-gray-300">Avaliação Grátis</h3>
+                        <p class="text-xs text-gray-400">Perfeito para testar a compatibilidade no seu computador.</p>
+                        <div class="text-4xl font-black text-white py-2">R$ 0<span class="text-sm font-medium text-gray-500">/7 dias</span></div>
+                        <hr class="border-gray-800">
+                        <ul class="space-y-2 text-xs text-gray-400">
+                            <li><i class="fa-solid fa-check text-accentGold mr-2"></i> Acesso total por 7 dias</li>
+                            <li><i class="fa-solid fa-check text-accentGold mr-2"></i> Gerador de chave imediato</li>
+                            <li>li><i class="fa-solid fa-check text-accentGold mr-2"></i> Auto-instalação guiada</li>
+                        </ul>
+                    </div>
+                    <button onclick="selecionarPlano('Gratuito (7 Dias)', 'FREE')" class="w-full mt-6 bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 rounded-xl text-sm transition">
+                        Ativar Teste Grátis
+                    </button>
                 </div>
-                <div class="space-y-3 p-4">
-                    <div class="w-12 h-12 bg-accentBlue/10 text-accentBlue rounded-full flex items-center justify-center text-xl font-bold mx-auto">2</div>
-                    <h3 class="text-lg font-bold text-white">Escolha o Método</h3>
-                    <p class="text-sm text-gray-400">Instale sozinho em 2 minutos via tutorial ou inicie seu período de testes imediatamente.</p>
+
+                <!-- PLANO 2: MENSAL (DESTAQUE) -->
+                <div class="bg-darkCard border-2 border-accentGold rounded-3xl p-6 flex flex-col justify-between relative shadow-2xl scale-105 z-10">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accentGold text-darkBg text-[10px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider">
+                        Mais Vendido
+                    </div>
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-bold text-white">Plano Mensal</h3>
+                        <p class="text-xs text-gray-400">Liberdade de cancelar quando quiser no cartão de crédito.</p>
+                        <div class="text-4xl font-black text-white py-2">R$ 49<span class="text-sm font-medium text-gray-500">/mês</span></div>
+                        <hr class="border-gray-800">
+                        <ul class="space-y-2 text-xs text-gray-300">
+                            <li><i class="fa-solid fa-check text-accentGold mr-2"></i> Licença Renovada Automaticamente</li>
+                            <li><i class="fa-solid fa-check text-accentGold mr-2"></i> Download do instalador atualizado</li>
+                            <li><i class="fa-solid fa-check text-accentGold mr-2"></i> Suporte remoto AnyDesk incluso</li>
+                        </ul>
+                    </div>
+                    <button onclick="selecionarPlano('Mensal', 'RECURRING')" class="w-full mt-6 bg-accentGold hover:bg-yellow-600 text-darkBg font-black py-3 rounded-xl text-sm transition shadow-lg shadow-yellow-600/10">
+                        Assinar Mensal
+                    </button>
                 </div>
-                <div class="space-y-3 p-4">
-                    <div class="w-12 h-12 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center text-xl font-bold mx-auto">3</div>
-                    <h3 class="text-lg font-bold text-white">Instalação Remota</h3>
-                    <p class="text-sm text-gray-400">Se preferir, nossa equipe entra via AnyDesk de forma agendada pelo portal após a contratação.</p>
+
+                <!-- PLANO 3: ANUAL -->
+                <div class="bg-darkCard border border-gray-800 rounded-3xl p-6 flex flex-col justify-between relative">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-bold text-gray-300">Plano Anual</h3>
+                            <span class="bg-green-500/10 text-green-400 text-[10px] font-bold px-2 py-0.5 rounded border border-green-500/20">Economize R$138</span>
+                        </div>
+                        <p class="text-xs text-gray-400">O melhor custo-benefício. Equivalente a R$ 37,50 por mês.</p>
+                        <div class="text-4xl font-black text-white py-2">R$ 450<span class="text-sm font-medium text-gray-500">/ano</span></div>
+                        <hr class="border-gray-800">
+                        <ul class="space-y-2 text-xs text-gray-400">
+                            <li><i class="fa-solid fa-check text-accentGold mr-2"></i> 1 Ano de Licença Garantida</li>
+                            <li><i class="fa-solid fa-check text-accentGold mr-2"></i> Prioridade em atualizações do software</li>
+                            <li><i class="fa-solid fa-check text-accentGold mr-2"></i> Suporte AnyDesk prioritário</li>
+                        </ul>
+                    </div>
+                    <button onclick="selecionarPlano('Anual', 'YEARLY')" class="w-full mt-6 bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 rounded-xl text-sm transition">
+                        Garantir Plano Anual
+                    </button>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- [SEÇÃO PREÇOS] -->
-    <section id="precos" class="py-20 bg-darkCard/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 class="text-3xl font-bold text-white">Pronto para começar?</h2>
-            </div>
-
-            <div class="max-w-md mx-auto bg-darkCard border-2 border-accentGold rounded-3xl p-8 relative shadow-2xl">
-                <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accentGold text-darkBg text-xs font-black px-4 py-1 rounded-full uppercase tracking-wider">
-                    Acesso Imediato
-                </div>
-                <div class="text-center mb-6">
-                    <h3 class="text-xl font-bold text-white mb-2">Licença Rapidoc Pro</h3>
-                    <div class="text-5xl font-black text-white my-5">R$ 49<span class="text-lg font-medium text-gray-500">/mês</span></div>
-                </div>
-                <hr class="border-gray-800 my-6">
-                <ul class="space-y-4 text-sm text-gray-300 mb-8">
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Todos os módulos liberados</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Download imediato do instalador</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Tutorial de Auto-Instalação passo a passo</li>
-                    <li class="flex items-center gap-3"><i class="fa-solid fa-check text-accentGold"></i> Suporte Remoto Incluso (Opcional se precisar)</li>
-                </ul>
-                <button onclick="acaoContratar()" class="w-full text-center bg-accentGold hover:bg-yellow-600 text-darkBg font-black py-4 rounded-xl transition-all shadow-lg">
-                    Comprar Licença e Instalar
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- [NOVO MODAL] - INTERFACE DE CADASTRO / LOGIN -->
+    <!-- MODAL DE CADASTRO OBRIGATÓRIO -->
     <div id="modalAuth" class="fixed inset-0 bg-darkBg/95 hidden z-50 items-center justify-center p-4">
-        <div class="bg-darkCard border border-gray-800 w-full max-w-md rounded-3xl p-6 sm:p-8 relative space-y-6">
+        <div class="bg-darkCard border border-gray-800 w-full max-w-md rounded-3xl p-6 relative space-y-6">
             <div class="text-center space-y-1">
-                <h3 id="authTitle" class="text-2xl font-black text-white">Criar sua Conta</h3>
-                <p id="authSubtitle" class="text-sm text-gray-400">Cadastre-se para ativar seus 7 dias de teste ou contratar</p>
+                <h3 class="text-2xl font-black text-white">Identificação Necessária</h3>
+                <p class="text-xs text-gray-400">Crie seu login para gerar e vincular sua Chave de Licença única.</p>
             </div>
 
-            <form id="formAuth" onsubmit="processarAuth(event)" class="space-y-4">
-                <div id="campoNome">
-                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Nome Completo</label>
-                    <input type="text" id="authNome" class="w-full bg-darkBg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accentGold text-sm" placeholder="Seu nome">
+            <form onsubmit="registrarUsuario(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Nome Completo</label>
+                    <input type="text" id="authNome" required class="w-full bg-darkBg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accentGold text-sm" placeholder="Seu nome">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">E-mail</label>
-                    <input type="email" required id="authEmail" class="w-full bg-darkBg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accentGold text-sm" placeholder="seu@email.com">
+                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">E-mail de Acesso</label>
+                    <input type="email" id="authEmail" required class="w-full bg-darkBg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accentGold text-sm" placeholder="seu@email.com">
                 </div>
                 <div>
-                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Senha do Painel</label>
-                    <input type="password" required id="authSenha" class="w-full bg-darkBg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accentGold text-sm" placeholder="Digite sua senha">
+                    <label class="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">Senha de Validação</label>
+                    <input type="password" id="authSenha" required class="w-full bg-darkBg border border-gray-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-accentGold text-sm" placeholder="Senha do painel (Digite C para testar)">
                 </div>
                 
                 <div id="msgErro" class="text-xs text-red-400 hidden text-center font-medium"></div>
 
-                <button type="submit" id="authSubmitBtn" class="w-full bg-accentGold hover:bg-yellow-600 text-darkBg font-bold py-3.5 rounded-xl transition text-sm">
-                    Criar Conta e Continuar
+                <button type="submit" class="w-full bg-accentGold hover:bg-yellow-600 text-darkBg font-bold py-3 rounded-xl transition text-sm">
+                    Salvar Dados e Prosseguir
                 </button>
             </form>
-
-            <div class="text-center">
-                <button onclick="alternarAbasAuth()" id="toggleAuthBtn" class="text-xs text-gray-400 hover:text-white transition underline">
-                    Já tem uma conta? Faça Login
-                </button>
-            </div>
-
-            <button onclick="fecharLogin()" class="absolute top-4 right-4 text-gray-500 hover:text-white text-xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
         </div>
     </div>
 
-    <!-- [TELA MODAL] - PORTAL DE ENTREGA AUTOMÁTICA PÓS-PAGAMENTO / TESTE -->
+    <!-- PORTAL DE ENTREGA AUTOMÁTICA E EXIBIÇÃO DA LICENÇA ÚNICA -->
     <div id="portalEntrega" class="fixed inset-0 bg-darkBg/95 hidden z-50 items-center justify-center p-4 overflow-y-auto">
         <div class="bg-darkCard border border-gray-800 w-full max-w-2xl rounded-3xl p-6 sm:p-10 relative space-y-6">
+            
             <div class="text-center space-y-2">
-                <div class="w-16 h-16 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center text-3xl mx-auto mb-2 animate-bounce">
+                <div class="w-12 h-12 bg-green-500/10 text-green-400 rounded-full flex items-center justify-center text-2xl mx-auto">
                     <i class="fa-solid fa-circle-check"></i>
                 </div>
-                <h2 id="entregaTitulo" class="text-2xl sm:text-3xl font-black text-white">Acesso Liberado!</h2>
-                <p class="text-gray-400 text-sm">Sua chave do Rapidoc Pro já está vinculada ao seu usuário. Escolha como instalar:</p>
+                <h2 class="text-2xl font-black text-white">Processo Concluído com Sucesso!</h2>
+                <p id="infoPlanoEscolhido" class="text-accentGold text-sm font-bold uppercase tracking-wider"></p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-4 pt-4">
-                <div class="border border-gray-800 bg-darkBg/50 p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-gray-700 transition">
+            <!-- BLOCO DA CHAVE DE LICENÇA ÚNICA CENTRALIZADA -->
+            <div class="bg-darkBg border border-dashed border-gray-800 rounded-2xl p-6 text-center space-y-3">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Sua ID de Licença e Chave de Acesso Única</span>
+                <div class="flex items-center justify-center gap-3">
+                    <div id="codigoLicencaDisplay" class="bg-darkCard px-6 py-3 rounded-xl border border-gray-700 text-xl sm:text-2xl font-mono font-bold text-white tracking-widest select-all">
+                        RP-XXXX-XXXX
+                    </div>
+                    <button onclick="copiarLicenca()" class="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-xl transition" title="Copiar Chave">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                </div>
+                <p class="text-[11px] text-gray-400 max-w-md mx-auto">
+                    <strong>⚠️ Atenção:</strong> Use esta mesma chave para fazer o login no painel web e para validar a ativação do programa quando abrir no computador.
+                </p>
+            </div>
+
+            <!-- OPÇÕES DE INSTALAÇÃO -->
+            <div class="grid md:grid-cols-2 gap-4 pt-2">
+                <div class="border border-gray-800 bg-darkBg/50 p-5 rounded-2xl flex flex-col justify-between space-y-4">
                     <div>
-                        <div class="text-accentGold text-xl mb-2"><i class="fa-solid fa-bolt"></i></div>
-                        <h3 class="font-bold text-white text-base">Instalação Manual Automática</h3>
-                        <p class="text-xs text-gray-400 mt-1">Baixe o instalador compactado e assista ao tutorial rápido de 2 minutos.</p>
+                        <div class="text-accentGold text-lg mb-1"><i class="fa-solid fa-bolt"></i></div>
+                        <h3 class="font-bold text-white text-sm">Instalação Manual Automática</h3>
+                        <p class="text-xs text-gray-400 mt-1">Baixe o instalador compactado agora e assista ao vídeo explicativo de 2 minutos.</p>
                     </div>
                     <div class="space-y-2 pt-2">
-                        <a href="#" class="block text-center bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold py-2.5 rounded-lg transition">
+                        <a href="#" class="block text-center bg-gray-800 hover:bg-gray-700 text-white text-xs font-bold py-2 rounded-lg transition">
                             <i class="fa-solid fa-download mr-1"></i> Baixar Instalador (.exe)
-                        </a>
-                        <a href="https://youtube.com" target="_blank" class="block text-center text-accentGold border border-accentGold/20 hover:bg-accentGold/5 text-xs font-bold py-2 rounded-lg transition">
-                            <i class="fa-solid fa-play mr-1"></i> Ver Vídeo Tutorial
                         </a>
                     </div>
                 </div>
 
-                <div class="border border-gray-800 bg-darkBg/50 p-5 rounded-2xl flex flex-col justify-between space-y-4 hover:border-gray-700 transition">
+                <div class="border border-gray-800 bg-darkBg/50 p-5 rounded-2xl flex flex-col justify-between space-y-4">
                     <div>
-                        <div class="text-accentBlue text-xl mb-2"><i class="fa-solid fa-headset"></i></div>
-                        <h3 class="font-bold text-white text-base">Agendar Suporte Remoto</h3>
-                        <p class="text-xs text-gray-400 mt-1">Agende uma janela automática para que façamos a instalação assistida via AnyDesk.</p>
+                        <div class="text-accentBlue text-lg mb-1"><i class="fa-solid fa-headset"></i></div>
+                        <h3 class="font-bold text-white text-sm">Agendar Instalação Remota</h3>
+                        <p class="text-xs text-gray-400 mt-1">Se preferir, nossa equipe acessa sua máquina via AnyDesk para realizar a configuração técnica.</p>
                     </div>
                     <div class="space-y-2 pt-2">
-                        <button onclick="abrirCalendario()" class="w-full text-center bg-accentBlue hover:bg-blue-600 text-white text-xs font-bold py-2.5 rounded-lg transition">
-                            <i class="fa-solid fa-calendar-days mr-1"></i> Marcar Dia e Horário
+                        <button onclick="document.getElementById('areaCalendario').classList.remove('hidden')" class="w-full text-center bg-accentBlue hover:bg-blue-600 text-white text-xs font-bold py-2 rounded-lg transition">
+                            <i class="fa-solid fa-calendar-days mr-1"></i> Agendar via AnyDesk
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div id="areaCalendario" class="hidden border-t border-gray-800 pt-6">
-                <h4 class="text-sm font-bold text-white mb-3 text-center">Selecione seu horário do AnyDesk:</h4>
-                <div class="bg-darkBg border border-gray-800 p-4 rounded-xl text-center text-xs text-gray-500">
-                    <p class="text-gray-400 mb-2">[Integração do Widget de Agendamento Calendly]</p>
-                    <div class="grid grid-cols-3 gap-2 max-w-xs mx-auto mt-2">
-                        <button onclick="alert('Instalação agendada com sucesso! O suporte enviará a conexão para o e-mail cadastrado.')" class="bg-darkCard p-2 rounded border border-gray-700 hover:border-accentBlue text-white font-medium">Hoje 14:00</button>
-                        <button onclick="alert('Instalação agendada com sucesso! O suporte enviará a conexão para o e-mail cadastrado.')" class="bg-darkCard p-2 rounded border border-gray-700 hover:border-accentBlue text-white font-medium">Hoje 16:00</button>
-                        <button onclick="alert('Instalação agendada com sucesso! O suporte enviará a conexão para o e-mail cadastrado.')" class="bg-darkCard p-2 rounded border border-gray-700 hover:border-accentBlue text-white font-medium">Amanhã 09:00</button>
-                    </div>
+            <!-- MOCKUP CALENDLY -->
+            <div id="areaCalendario" class="hidden border-t border-gray-800 pt-4 text-center">
+                <div class="bg-darkBg border border-gray-800 p-4 rounded-xl text-xs text-gray-500">
+                    <p class="text-gray-400 mb-2">[Integração Ativa da Agenda do Calendly]</p>
+                    <button onclick="alert('Suporte agendado com sucesso!')" class="bg-darkCard p-2 rounded border border-gray-700 text-white font-medium">Agendar para Próximo Horário Disponível</button>
                 </div>
             </div>
 
@@ -257,108 +264,96 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT DE SESSÃO E LÓGICA DE LOGIN -->
+    <!-- SCRIPTS DE AUTOMAÇÃO E GERADOR DE LICENÇAS -->
     <script>
-        let usuarioAutenticado = false;
-        let modoLogin = false; // Começa na aba de cadastro
-        let acaoPendente = null; // Guarda se o cliente queria testar ou contratar
+        let clienteDados = null;
+        let planoPendente = null;
 
-        function abrirLogin() {
-            document.getElementById('modalAuth').style.display = 'flex';
-        }
-
-        function fecharLogin() {
-            document.getElementById('modalAuth').style.display = 'none';
-            document.getElementById('msgErro').classList.add('hidden');
-        }
-
-        function alternarAbasAuth() {
-            modoLogin = !modoLogin;
-            const title = document.getElementById('authTitle');
-            const subtitle = document.getElementById('authSubtitle');
-            const campoNome = document.getElementById('campoNome');
-            const submitBtn = document.getElementById('authSubmitBtn');
-            const toggleBtn = document.getElementById('toggleAuthBtn');
-
-            if (modoLogin) {
-                title.innerText = "Entrar no Painel";
-                subtitle.innerText = "Insira suas credenciais para gerenciar sua licença";
-                campoNome.style.display = 'none';
-                submitBtn.innerText = "Entrar e Continuar";
-                toggleBtn.innerText = "Não tem uma conta? Cadastre-se";
+        function selecionarPlano(nomePlano, sufixoPlano) {
+            planoPendente = { nome: nomePlano, sufixo: sufixoPlano };
+            
+            if (!clienteDados) {
+                // Se não tem cadastro ainda, força abrir a tela de identificação
+                abrirAuthModal();
             } else {
-                title.innerText = "Criar sua Conta";
-                subtitle.innerText = "Cadastre-se para ativar seus 7 dias de teste ou contratar";
-                campoNome.style.display = 'block';
-                submitBtn.innerText = "Criar Conta e Continuar";
-                toggleBtn.innerText = "Já tem uma conta? Faça Login";
+                // Se já está logado, gera a chave do plano direto
+                concluirFluxoLicenca();
             }
         }
 
-        function processarAuth(e) {
+        function abrirAuthModal() {
+            document.getElementById('modalAuth').style.display = 'flex';
+        }
+
+        function registrarUsuario(e) {
             e.preventDefault();
-            const senhaInput = document.getElementById('authSenha').value;
+            const nome = document.getElementById('authNome').value;
+            const email = document.getElementById('authEmail').value;
+            const senha = document.getElementById('authSenha').value;
             const erroDiv = document.getElementById('msgErro');
 
-            // Validação simplificada baseada na chave de teste do desenvolvedor
-            if (senhaInput !== "C") {
-                erroDiv.innerText = "Chave de acesso inválida para este ambiente de homologação.";
+            // Validação de homologação baseada no histórico de segurança (Senha simplificada 'C')
+            if (senha !== "C") {
+                erroDiv.innerText = "Chave de acesso inválida para o ambiente de homologação.";
                 erroDiv.classList.remove('hidden');
                 return;
             }
 
-            // Sucesso na autenticação
-            usuarioAutenticado = true;
-            fecharLogin();
+            // Armazena os dados do cliente localmente
+            clienteDados = { nome, email };
             
-            // Atualizar elementos visuais da interface
+            document.getElementById('modalAuth').style.display = 'none';
             document.getElementById('userStatus').classList.remove('hidden');
             document.getElementById('navLoginBtn').style.display = 'none';
 
-            // Executar ação que o usuário tentou fazer antes do login
-            if (acaoPendente === 'teste') {
-                abrirPortalEntrega('teste');
-            } else if (acaoPendente === 'contratar') {
-                abrirPortalEntrega('contratar');
+            // Se ele já tinha escolhido um plano, segue o fluxo, senão joga ele para a tabela de preços
+            if (planoPendente) {
+                concluirFluxoLicenca();
+            } else {
+                window.location.hash = "precos";
             }
         }
 
-        function acaoTeste() {
-            if (!usuarioAutenticado) {
-                acaoPendente = 'teste';
-                abrirLogin();
-            } else {
-                abrirPortalEntrega('teste');
-            }
-        }
+        function concluirFluxoLicenca() {
+            // 1. Gera o código de licença único baseado nas especificações do negócio
+            const numeroAleatorio = Math.floor(1000 + Math.random() * 9000); // 4 dígitos
+            const sufixo = planoPendente ? planoPendente.sufixo : 'FREE';
+            const chaveGerada = `RP-${sufixo}-${numeroAleatorio}`;
 
-        function acaoContratar() {
-            if (!usuarioAutenticado) {
-                acaoPendente = 'contratar';
-                abrirLogin();
-            } else {
-                abrirPortalEntrega('contratar');
-            }
-        }
+            // 2. Atualiza os elementos da tela com a nova ID gerada
+            document.getElementById('infoPlanoEscolhido').innerText = `Plano Selecionado: ${planoPendente ? planoPendente.nome : 'Teste 7 Dias'}`;
+            document.getElementById('codigoLicencaDisplay').innerText = chaveGerada;
 
-        function abrirPortalEntrega(tipo) {
-            const titulo = document.getElementById('entregaTitulo');
-            if (tipo === 'teste') {
-                titulo.innerText = "Período de Teste Ativado (7 Dias)!";
-            } else {
-                titulo.innerText = "Pagamento Confirmado / Licença Ativa!";
-            }
+            // =========================================================================
+            // 🌐 INTEGRAÇÃO FUTURA COM O SEU SERVIDOR DO RAILWAY:
+            // Quando sua API no Railway estiver pronta, você vai descomentar e usar o bloco abaixo:
+            //
+            // fetch('https://seu-servidor.railway.app/api/licencas', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify({
+            //         nome: clienteDados.nome,
+            //         email: clienteDados.email,
+            //         chave: chaveGerada,
+            //         plano: planoPendente.nome
+            //     })
+            // });
+            // =========================================================================
+
+            // 3. Abre o portal de download e entrega
             document.getElementById('portalEntrega').style.display = 'flex';
+        }
+
+        function copiarLicenca() {
+            const texto = document.getElementById('codigoLicencaDisplay').innerText;
+            navigator.clipboard.writeText(texto);
+            alert('Chave de Licença copiada para a área de transferência!');
         }
 
         function fecharPortal() {
             document.getElementById('portalEntrega').style.display = 'none';
             document.getElementById('areaCalendario').classList.add('hidden');
-            acaoPendente = null;
-        }
-
-        function abrirCalendario() {
-            document.getElementById('areaCalendario').classList.remove('hidden');
+            planoPendente = null;
         }
     </script>
 
