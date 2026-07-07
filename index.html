@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rapidoc Pro | Gestão Inteligente para Pequenas Empresas</title>
     
-    <!-- TAILWIND CONFIG & COLORS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,18 +21,15 @@
         }
     </script>
     
-    <!-- FONTS & ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="rapidoc_256.png">
 </head>
 <body class="bg-darkBg text-gray-100 font-sans antialiased scroll-smooth">
 
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+o+Rapidoc+Pro." target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 z-50 flex items-center justify-center text-2xl">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- NAVEGAÇÃO -->
     <nav class="border-b border-gray-800 bg-darkBg/90 backdrop-blur sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3">
@@ -54,7 +50,6 @@
         </div>
     </nav>
 
-    <!-- HERO PRINCIPAL -->
     <header class="relative overflow-hidden py-16 lg:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
             <div class="space-y-6 lg:col-span-5">
@@ -91,7 +86,6 @@
         </div>
     </header>
 
-    <!-- SEÇÃO DE PLANOS -->
     <section id="precos" class="py-20 bg-darkCard/20 border-t border-gray-900">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-2">
@@ -101,7 +95,6 @@
 
             <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto items-stretch">
                 
-                <!-- PLANO 1: GRATUITO -->
                 <div class="bg-darkCard border border-gray-800 rounded-3xl p-6 flex flex-col justify-between relative">
                     <div class="space-y-4">
                         <h3 class="text-lg font-bold text-gray-300">Avaliação Grátis</h3>
@@ -119,7 +112,6 @@
                     </button>
                 </div>
 
-                <!-- PLANO 2: MENSAL (HOTMART WINDOWS EMBEDDED) -->
                 <div class="bg-darkCard border-2 border-accentGold rounded-3xl p-6 flex flex-col justify-between relative shadow-2xl scale-105 z-10">
                     <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accentGold text-darkBg text-[10px] font-black px-3 py-0.5 rounded-full uppercase tracking-wider">
                         Mais Vendido
@@ -140,7 +132,6 @@
                     </button>
                 </div>
 
-                <!-- PLANO 3: ANUAL (HOTMART WINDOWS EMBEDDED) -->
                 <div class="bg-darkCard border border-gray-800 rounded-3xl p-6 flex flex-col justify-between relative">
                     <div class="space-y-4">
                         <div class="flex justify-between items-center">
@@ -165,7 +156,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE FAQ (PERGUNTAS FREQUENTES) -->
     <section id="faq" class="py-20 border-t border-gray-900 bg-darkBg">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div class="text-center space-y-2">
@@ -190,7 +180,6 @@
         </div>
     </section>
 
-    <!-- MODAL DE CADASTRO OBRIGATÓRIO -->
     <div id="modalAuth" class="fixed inset-0 bg-darkBg/95 hidden z-50 items-center justify-center p-4">
         <div class="bg-darkCard border border-gray-800 w-full max-w-md rounded-3xl p-6 relative space-y-6">
             <div class="text-center space-y-1">
@@ -221,7 +210,6 @@
         </div>
     </div>
 
-    <!-- PORTAL DE ENTREGA AUTOMÁTICA (APENAS PARA O TESTE GRATUITO) -->
     <div id="portalEntrega" class="fixed inset-0 bg-darkBg/95 hidden z-50 items-center justify-center p-4 overflow-y-auto">
         <div class="bg-darkCard border border-gray-800 w-full max-w-2xl rounded-3xl p-6 sm:p-10 relative space-y-6">
             
@@ -233,7 +221,6 @@
                 <p class="text-gray-400 text-sm">Insira o código abaixo no programa quando abrir pela primeira vez no seu computador:</p>
             </div>
 
-            <!-- BLOCO DA CHAVE DE LICENÇA ÚNICA -->
             <div class="bg-darkBg border border-dashed border-gray-800 rounded-2xl p-6 text-center space-y-3">
                 <span class="text-xs font-bold text-gray-500 uppercase tracking-widest">Sua Chave de Teste Temporária</span>
                 <div class="flex items-center justify-center gap-3">
@@ -249,7 +236,6 @@
                 </p>
             </div>
 
-            <!-- DOWNLOADS -->
             <div class="grid md:grid-cols-2 gap-4 pt-2">
                 <div class="border border-gray-800 bg-darkBg/50 p-5 rounded-2xl flex flex-col justify-between space-y-4">
                     <div>
@@ -263,7 +249,7 @@
 
                 <div class="border border-gray-800 bg-darkBg/50 p-5 rounded-2xl flex flex-col justify-between space-y-4">
                     <div>
-                        <h3 class="font-bold text-white text-sm">Precisa de Ajuda Técnica?</h3>
+                        <h3 class="font-bold text-white text-sm">Precisa de Ajuda Técnico?</h3>
                         <p class="text-xs text-gray-400 mt-1">Nossa equipe técnica pode realizar a configuração inicial para você de forma guiada via AnyDesk.</p>
                     </div>
                     <button onclick="document.getElementById('areaCalendario').classList.remove('hidden')" class="w-full text-center bg-accentBlue hover:bg-blue-600 text-white text-xs font-bold py-2 rounded-lg transition">
@@ -285,7 +271,6 @@
         </div>
     </div>
 
-    <!-- SCRIPTS DE CONTROLE DE FLUXO -->
     <script>
         // =========================================================================
         // 🔒 LINKS DA HOTMART (Substitua quando suas ofertas forem geradas)
@@ -346,10 +331,10 @@
                 return;
             }
 
-            // FLUXO COMERCIAL VIA MODAL / POP-UP INDEPENDENTE
+            // FLUXO COMERCIAL VIA MODAL / POP-UP INDEPENDENTE (MANTÉM O CLIENTE NO SITE)
             let urlCheckout = planoPendente.sufixo === 'RECURRING' ? LINK_HOTMART_MENSAL : LINK_HOTMART_ANUAL;
             
-            // Dimensões otimizadas para o checkout limpo
+            // Dimensões otimizadas para o checkout customizado limpo
             const largura = 550;
             const altura = 750;
             const esquerda = (screen.width / 2) - (largura / 2);
